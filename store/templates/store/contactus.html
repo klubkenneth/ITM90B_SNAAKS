@@ -1,0 +1,39 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <form action="action_page.php">
+  
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+      <label for="lname">Business Name</label>
+      <input type="text" id="bname" name="Busines Name" placeholder="Your Business Name..">
+
+      <label for="Store">Store</label>
+      <select id="Store" name="Store">
+        <option value="ATSR Noth">ATSR North</option>
+        <option value="ATSR East">ATSR East</option>
+        <option value="ATSR West">ATSR West</option>
+      </select>
+  
+      <label for="Region">Region</label>
+      <select id="Region" name="Region">
+        <option value="GTA">GTA</option>
+        <option value="Ajax">Ajax</option>
+        <option value="Hamilton">Niagara</option>
+      </select>
+  
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  
+      <input type="submit" value="Submit">
+  
+    </form>
+  </div>
+
+{% endblock content %}

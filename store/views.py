@@ -17,6 +17,10 @@ def store(request):
 	return render(request, 'store/store.html', context)
 
 
+def contactus(request):
+	context = {}
+	return render(request, 'store/contactus.html', context)
+
 def cart(request):
 	data = cartData(request)
 
