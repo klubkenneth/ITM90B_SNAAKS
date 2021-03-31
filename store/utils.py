@@ -44,7 +44,7 @@ def cartData(request):
 	if request.user.is_authenticated:
 		customer = request.user.customer
 		order, created = Order.objects.get_or_create(customer=customer, complete=False)
-		items = order.orderitem_set.all()
+		items = order.rentalitem_set.all()
 		cartItems = order.get_cart_items
 	else:
 		cookieData = cookieCart(request)
@@ -75,7 +75,7 @@ def guestOrder(request, data):
 
 	for item in items:
 		product = Product.objects.get(id=item['id'])
-		orderItem = OrderItem.objects.create(
+		rentalItem = RentalItem.objects.create(
 			product=product,
 			order=order,
 			quantity=item['quantity'],
